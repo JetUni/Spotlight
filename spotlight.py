@@ -9,9 +9,9 @@ def rename(path, newpath):
         print(path, newpath, sep="  ===>  ")
     except FileExistsError:
         os.remove(path)
-        print("Duplicate file:", path)
+        print("Duplicate file:", newpath)
     except PermissionError:
-        print("Permission denied:", newpath)
+        print("Permission denied:", path)
         pass
 
 def hash_and_move():
